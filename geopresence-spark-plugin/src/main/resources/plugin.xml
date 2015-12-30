@@ -1,0 +1,12 @@
+<!-- Define your plugins -->
+<plugin>
+    <name>SpellChecker for Spark</name>
+    <version>1.0</version>
+    <author>Derek DeMoro</author>
+    <homePage>http://www.jivesoftware.org</homePage>
+    <email>derek@jivesoftware.com</email>
+    <description>Adds the ability to do spell checking within the Spark IM client.</description>
+    <class>com.geopresence.spark.plugin.GeopresenceSparkPlugin</class>
+    <minSparkVersion>1.1.9.1</minSparkVersion>
+</plugin>
+

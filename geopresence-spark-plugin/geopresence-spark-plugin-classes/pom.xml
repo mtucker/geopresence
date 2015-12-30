@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<artifactId>geopresence-parent</artifactId>
+		<groupId>com.geopresence</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.geopresence</groupId>
+	<artifactId>geopresence-spark-plugin-classes</artifactId>
+	<name>geopresence-spark-plugin-classes</name>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+
+		<!-- SPARK -->
+
+		<dependency>
+			<groupId>org.igniterealtime.spark</groupId>
+			<artifactId>spark</artifactId>
+			<version>2.6.0.Beta1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- SMACK -->
+
+		<dependency>
+			<groupId>jivesoftware</groupId>
+			<artifactId>smack</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>jivesoftware</groupId>
+			<artifactId>smackx</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!--  GEOPRESENCE -->
+		<dependency>
+			<groupId>com.geopresence</groupId>
+			<artifactId>geopresence-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+	</dependencies>
+</project>

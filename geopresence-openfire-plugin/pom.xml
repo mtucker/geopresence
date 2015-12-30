@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.geopresence</groupId>
+	<artifactId>geopresence-openfire-plugin</artifactId>
+	<packaging>openfire-plugin</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Geopresence Openfire Plugin</name>
+	<description>Geopresence Plugin</description>
+	
+	<organization>
+		<name>Geopresence</name>
+	</organization>
+	
+	<parent>
+		<groupId>com.geopresence</groupId>
+		<artifactId>geopresence-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<dependencies>
+		
+		<!--  GEOPRESENCE -->
+		
+		<dependency>
+			<groupId>com.geopresence</groupId>
+			<artifactId>geopresence-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.geopresence</groupId>
+			<artifactId>geopresence-geocell</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!--  OPENFIRE -->
+		
+		<dependency>
+			<groupId>org.igniterealtime.openfire</groupId>
+			<artifactId>openfire</artifactId>
+			<version>3.8.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- JAVA -->
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- APACHE COMMONS DEPENDENCIES -->
+	
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.reucon.maven.plugins</groupId>
+				<artifactId>maven-openfire-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<jspPackageName>com.geopresence.jsp</jspPackageName>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+	          <!--
+	            Configure Surefire to run in integration-test phase
+	          -->
+	          <plugin>
+	            <artifactId>maven-surefire-plugin</artifactId>
+	            <executions>
+	              <execution>
+	                <id>surefire-it</id>
+	                <phase>integration-test</phase>
+	                <goals>
+	                  <goal>test</goal>
+	                </goals>
+	                <configuration>
+	                  <testSourceDirectory>${basedir}/src/integration-test/java</testSourceDirectory>
+					  <testClassesDirectory>${basedir}/target/integration-test-classes</testClassesDirectory>
+	                  <skip>false</skip>
+	                  <redirectTestOutputToFile>true</redirectTestOutputToFile>
+	                  <printSummary>true</printSummary>
+	                  <forkMode>always</forkMode>
+	                  <includes>
+	                    <include>**/*.java</include>
+	                  </includes>
+	                </configuration>
+	              </execution>
+	            </executions>
+	          </plugin>
+			  
+		</plugins>
+	</build>
+
+</project>
+    

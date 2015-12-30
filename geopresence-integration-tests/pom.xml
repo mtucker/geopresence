@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>geopresence-parent</artifactId>
+    <groupId>com.geopresence</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.geopresence</groupId>
+  <artifactId>geopresence-integration-tests</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>GeoPresence Integration Tests</name>
+  
+  <dependencies>
+  	
+  	<!--  GEOPRESENCE -->
+		
+	<dependency>
+		<groupId>com.geopresence</groupId>
+		<artifactId>geopresence-openfire-plugin</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+
+          <!--
+
+            Configure Surefire to run in integration-test phase
+          -->
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>surefire-it</id>
+                <phase>integration-test</phase>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <configuration>
+                  <skip>false</skip>
+                  <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                  <printSummary>true</printSummary>
+                  <forkMode>always</forkMode>
+                  <includes>
+                    <include>**/*.java</include>
+                  </includes>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>		  
+		</plugins>
+	</build>
+	
+</project>

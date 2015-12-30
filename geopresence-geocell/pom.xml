@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.geopresence</groupId>
+	<artifactId>geopresence-geocell</artifactId>
+	<name>GeoPresence Geocell</name>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+		<groupId>com.geopresence</groupId>
+		<artifactId>geopresence-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<dependencies>
+	
+		<!-- GeoPresence -->
+		<dependency>
+			<groupId>com.geopresence</groupId>
+  			<artifactId>geopresence-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+        <!-- Java GeoModel -->
+        <dependency>
+            <groupId>com.beoui</groupId>
+            <artifactId>geocell</artifactId>
+            <version>0.0.8</version>
+        </dependency>
+	
+	</dependencies>
+
+    <repositories>
+        <repository>
+            <id>javageomodel-repo</id>
+            <name>GeocellJava Repository</name>
+            <url>http://javageomodel.googlecode.com/svn/repository</url>
+        </repository>
+    </repositories>
+	
+</project>

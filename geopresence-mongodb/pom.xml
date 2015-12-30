@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.geopresence</groupId>
+    <artifactId>geopresence-mongodb</artifactId>
+    <name>GeoPresence Mongodb</name>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.geopresence</groupId>
+        <artifactId>geopresence-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+
+        <!-- GeoPresence -->
+        <dependency>
+            <groupId>com.geopresence</groupId>
+            <artifactId>geopresence-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- MongoDB Driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

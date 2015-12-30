@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/GeoPresence/!svn/ver/12/geopresence-openfire-plugin/trunk/src/main/openfire
+END
+readme.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/GeoPresence/!svn/ver/7/geopresence-openfire-plugin/trunk/src/main/openfire/readme.html
+END
+changelog.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/GeoPresence/!svn/ver/7/geopresence-openfire-plugin/trunk/src/main/openfire/changelog.html
+END
+plugin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/GeoPresence/!svn/ver/12/geopresence-openfire-plugin/trunk/src/main/openfire/plugin.xml
+END

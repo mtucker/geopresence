@@ -3,7 +3,7 @@
 
     <!-- Main plugin class -->
     <class>com.geopresence.openfire.GeopresencePlugin</class>
-    
+
     <!-- Plugin meta-data -->
     <name>${pom.name}</name>
     <description>${pom.description}</description>
@@ -11,18 +11,18 @@
     <version>${pom.version}</version>
     <date>${openfire-plugin.build.date}</date>
     <minServerVersion>3.3.2</minServerVersion>
-<!--
-    <databaseKey>mtucker-openfire-plugin</databaseKey>
-    <databaseVersion>1</databaseVersion>
--->
+    <!--
+        <databaseKey>mtucker-openfire-plugin</databaseKey>
+        <databaseVersion>1</databaseVersion>
+    -->
     <licenseType>gpl</licenseType>
-    
-    <!-- Admin console meta-data -->
-    <adminconsole>              
-<!--
-        <tab id="tab-server">
 
-        </tab>
--->
+    <!-- Admin console meta-data -->
+    <adminconsole>
+        <!--
+                <tab id="tab-server">
+
+                </tab>
+        -->
     </adminconsole>
 </plugin>

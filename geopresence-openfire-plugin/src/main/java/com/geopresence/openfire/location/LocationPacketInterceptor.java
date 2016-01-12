@@ -16,62 +16,62 @@ import com.geopresence.xmpp.packet.GeoLoc;
  */
 public class LocationPacketInterceptor implements PacketInterceptor {
 
-	private static final Logger log = LoggerFactory.getLogger(LocationPacketInterceptor.class);
+  private static final Logger log = LoggerFactory.getLogger(LocationPacketInterceptor.class);
 
-	private static final String NAMESPACE_GEOLOC = "http://jabber.org/protocol/geoloc";
+  private static final String NAMESPACE_GEOLOC = "http://jabber.org/protocol/geoloc";
 
-	public LocationPacketInterceptor() {
-		
-	}
-	
-	public void interceptPacket(Packet packet, Session session,
-			boolean incoming, boolean processed) throws PacketRejectedException {
+  public LocationPacketInterceptor() {
 
-		if (incoming && !processed && packet instanceof IQ) {
+  }
 
-			IQ iq = (IQ) packet;
+  public void interceptPacket(Packet packet, Session session,
+                              boolean incoming, boolean processed) throws PacketRejectedException {
 
-			Element childElement = iq.getChildElement();
-			if (childElement == null) {
-				return;
-			}
+    if (incoming && !processed && packet instanceof IQ) {
 
-			String namespace = childElement.getNamespaceURI();
+      IQ iq = (IQ) packet;
 
-			if (namespace.equals(NAMESPACE_GEOLOC)) {
+      Element childElement = iq.getChildElement();
+      if (childElement == null) {
+        return;
+      }
 
-				if (iq.getType().equals(IQ.Type.set)) {
+      String namespace = childElement.getNamespaceURI();
 
-					log.info("Intercepted Location Update...");
-					
-					try {
-						
-						Double lat = Double
-								.valueOf(childElement.element("lat").getText());
-						Double lon = Double
-								.valueOf(childElement.element("lon").getText());
-						Double maxProximity = Double
-								.valueOf(childElement.element("maxProximity").getText());
-						
-						GeoLoc geoLoc = new GeoLoc();
-						geoLoc.setFrom(iq.getFrom().toFullJID());
-						geoLoc.setLat(lat);
-						geoLoc.setLon(lon);
-						geoLoc.setMaxProximity(maxProximity);
-						
-						LocationEventDispatcher.dispatchEvent(geoLoc,
-								LocationEventDispatcher.EventType.location_updated);
+      if (namespace.equals(NAMESPACE_GEOLOC)) {
 
-					} catch (Exception e) {
-						log.error("An error occurred updating location of user:");
-						e.printStackTrace();
-					}
+        if (iq.getType().equals(IQ.Type.set)) {
 
-				}
+          log.info("Intercepted Location Update...");
 
-			}
+          try {
 
-		}
+            Double lat = Double
+                .valueOf(childElement.element("lat").getText());
+            Double lon = Double
+                .valueOf(childElement.element("lon").getText());
+            Double maxProximity = Double
+                .valueOf(childElement.element("maxProximity").getText());
 
-	}
+            GeoLoc geoLoc = new GeoLoc();
+            geoLoc.setFrom(iq.getFrom().toFullJID());
+            geoLoc.setLat(lat);
+            geoLoc.setLon(lon);
+            geoLoc.setMaxProximity(maxProximity);
+
+            LocationEventDispatcher.dispatchEvent(geoLoc,
+                LocationEventDispatcher.EventType.location_updated);
+
+          } catch (Exception e) {
+            log.error("An error occurred updating location of user:");
+            e.printStackTrace();
+          }
+
+        }
+
+      }
+
+    }
+
+  }
 }

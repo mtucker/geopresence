@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Matt-WIN7" name="com.geopresence.test.integration.GeopresenceChatTest" tests="1" failures="1" timestamp="26 Aug 2011 14:27:37 GMT" time="13.807" errors="0">
-  <testcase name="@AfterClass cleanup" time="0.0" classname="com.geopresence.test.integration.GeopresenceChatTest">
-    <failure type="org.jivesoftware.smack.XMPPException" message="No response from server.">
-      <![CDATA[No response from server.: 
+<testsuite hostname="Matt-WIN7" name="com.geopresence.test.integration.GeopresenceChatTest" tests="1" failures="1"
+           timestamp="26 Aug 2011 14:27:37 GMT" time="13.807" errors="0">
+    <testcase name="@AfterClass cleanup" time="0.0" classname="com.geopresence.test.integration.GeopresenceChatTest">
+        <failure type="org.jivesoftware.smack.XMPPException" message="No response from server.">
+            <![CDATA[No response from server.:
 	at org.jivesoftware.smack.AccountManager.deleteAccount(AccountManager.java:302)
 	at com.geopresence.test.integration.GeopresenceChatTest.cleanup(GeopresenceChatTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -31,11 +32,11 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
 ]]>
-    </failure>
-  </testcase>
-  <testcase name="testChat" time="7.101" classname="com.geopresence.test.integration.GeopresenceChatTest">
-    <failure type="java.lang.AssertionError">
-      <![CDATA[java.lang.AssertionError
+        </failure>
+    </testcase>
+    <testcase name="testChat" time="7.101" classname="com.geopresence.test.integration.GeopresenceChatTest">
+        <failure type="java.lang.AssertionError">
+            <![CDATA[java.lang.AssertionError
 	at com.geopresence.test.integration.GeopresenceChatTest.testChat(GeopresenceChatTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -63,6 +64,6 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
 ]]>
-    </failure>
-  </testcase>
+        </failure>
+    </testcase>
 </testsuite>

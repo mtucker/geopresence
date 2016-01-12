@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.jdo:jdo2-api:2.3-20090302111651">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/jdo/jdo2-api/2.3-20090302111651/jdo2-api-2.3-20090302111651.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/jdo/jdo2-api/2.3-20090302111651/jdo2-api-2.3-20090302111651-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/jdo/jdo2-api/2.3-20090302111651/jdo2-api-2.3-20090302111651-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

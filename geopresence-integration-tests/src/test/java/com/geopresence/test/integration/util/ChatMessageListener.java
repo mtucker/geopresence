@@ -11,32 +11,32 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ChatMessageListener implements MessageListener {
-	
-	private static final Logger log = LoggerFactory.getLogger(ChatMessageListener.class);
-	
-	private HashMap<String, List<Message>> chats = new HashMap<String, List<Message>>();
 
-	@Override
-	public void processMessage(Chat chat, Message message) {
+  private static final Logger log = LoggerFactory.getLogger(ChatMessageListener.class);
 
-		String chatParticipant = chat.getParticipant();
-		
-		if(chats.get(chatParticipant) == null){
-			
-			chats.put(chatParticipant, new ArrayList<Message>());
-			
-		}
-		
-		log.info("Received Chat Message from " + chatParticipant + ": " + message.getBody());
-		
-		chats.get(chatParticipant).add(message);
-		
-	}
-	
-	public List<Message> getChats(String participant){
-		
-		return chats.get(participant);
-		
-	}
+  private HashMap<String, List<Message>> chats = new HashMap<String, List<Message>>();
+
+  @Override
+  public void processMessage(Chat chat, Message message) {
+
+    String chatParticipant = chat.getParticipant();
+
+    if (chats.get(chatParticipant) == null) {
+
+      chats.put(chatParticipant, new ArrayList<Message>());
+
+    }
+
+    log.info("Received Chat Message from " + chatParticipant + ": " + message.getBody());
+
+    chats.get(chatParticipant).add(message);
+
+  }
+
+  public List<Message> getChats(String participant) {
+
+    return chats.get(participant);
+
+  }
 
 }

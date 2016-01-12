@@ -20,15 +20,14 @@ package com.beoui.geocell.model;
  * The cost depends on application use of geocells.
  *
  * @author Alexandre Gellibert <alexandre.gellibert@gmail.com>
- *
  */
 public interface CostFunction {
 
-    /**
-     * @param numCells number of cells found
-     * @param resolution resolution of those cells
-     * @return the cost of the operation
-     */
-    public double defaultCostFunction(int numCells, int resolution);
+  /**
+   * @param numCells   number of cells found
+   * @param resolution resolution of those cells
+   * @return the cost of the operation
+   */
+  public double defaultCostFunction(int numCells, int resolution);
 
 }

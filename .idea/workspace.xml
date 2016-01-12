@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b62a8f7-5638-4c1a-a8de-6f1b6bdfa779" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jdo_jdo2_api_2_3_20090302111651.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_5_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_5_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_5_14.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geocell/geocell.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-client-api/geopresence-client-api.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-commons/geopresence-commons.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-geocell/geopresence-geocell.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-integration-tests/geopresence-integration-tests.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-mongodb/geopresence-mongodb.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/geopresence-openfire-plugin.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-parent/geopresence-parent.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/geopresence-spark-plugin-classes.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/pom.xml" afterPath="$PROJECT_DIR$/geocell/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellLogger.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellManager.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellUtils.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/GeocellUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/comparator/DoubleTupleComparator.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/comparator/DoubleTupleComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/comparator/LocationComparableTuple.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/comparator/LocationComparableTuple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/BoundingBox.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/BoundingBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/CostFunction.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/CostFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/DefaultCostFunction.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/DefaultCostFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/GeocellQuery.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/GeocellQuery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/LocationCapable.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/LocationCapable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/Point.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/Point.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/Tuple.java" afterPath="$PROJECT_DIR$/geocell/src/main/java/com/beoui/geocell/model/Tuple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/GeocellTests.java" afterPath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/GeocellTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/HowToUseGeocell.java" afterPath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/HowToUseGeocell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/ObjectToSave.java" afterPath="$PROJECT_DIR$/geocell/src/test/java/com/beoui/utils/ObjectToSave.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-client-api/pom.xml" afterPath="$PROJECT_DIR$/geopresence-client-api/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/GeopresenceClientBaseTest.java" afterPath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/GeopresenceClientBaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/GeopresenceClientRosterTests.java" afterPath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/GeopresenceClientRosterTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/util/RosterEventListener.java" afterPath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/util/RosterEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/util/RosterEventType.java" afterPath="$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/util/RosterEventType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/pom.xml" afterPath="$PROJECT_DIR$/geopresence-commons/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/GeopresenceManager.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/GeopresenceManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/event/GeopresenceEventDispatcher.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/event/GeopresenceEventDispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/event/GeopresenceEventListener.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/event/GeopresenceEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/exception/GeopresenceException.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/exception/GeopresenceException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/model/Entity.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/model/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/xmpp/packet/GeoLoc.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/xmpp/packet/GeoLoc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/xmpp/packet/GeopresencePreferences.java" afterPath="$PROJECT_DIR$/geopresence-commons/src/main/java/com/geopresence/xmpp/packet/GeopresencePreferences.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/pom.xml" afterPath="$PROJECT_DIR$/geopresence-geocell/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/GeocellGeopresenceManager.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/GeocellGeopresenceManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/GeocellGridManager.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/GeocellGridManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/event/GeocellEventDispatcher.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/event/GeocellEventDispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/event/GeocellEventListener.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/event/GeocellEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/Geocell.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/Geocell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/GeocellEntity.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/GeocellEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/GeocellGrid.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/model/GeocellGrid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/utils/GeocellCollectionUtils.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/utils/GeocellCollectionUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/utils/GeocellUtils.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/main/java/com/geopresence/geocell/utils/GeocellUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellBaseTest.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellBaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellEventListenerTest.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellEventListenerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellGeopresenceManagerTest.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellGeopresenceManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellUtilsTest.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/GeocellUtilsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/PlaceAndMoveTests.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/PlaceAndMoveTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/ProximateEntitiesTest.java" afterPath="$PROJECT_DIR$/geopresence-geocell/src/test/java/com/geopresence/geocell/test/ProximateEntitiesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/pom.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceChatTest.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceChatTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceIntegrationBaseTest.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceIntegrationBaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceRosterTests.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/GeopresenceRosterTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/ChatListener.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/ChatListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/ChatMessageListener.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/ChatMessageListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/RosterEventListener.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/RosterEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/RosterEventType.java" afterPath="$PROJECT_DIR$/geopresence-integration-tests/src/test/java/com/geopresence/test/integration/util/RosterEventType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/Default test.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/Default test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/Default test.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/Default test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/classes.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/classes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/index.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/main.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods-not-run.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods-not-run.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/reporter-output.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/reporter-output.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/testng-failed.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/testng.xml.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/testng.xml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/toc.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/Default suite/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/index.html" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/junitreports/TEST-com.geopresence.test.integration.GeopresenceChatTest.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/junitreports/TEST-com.geopresence.test.integration.GeopresenceChatTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/junitreports/TEST-com.geopresence.test.integration.GeopresenceClientRosterTests.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/junitreports/TEST-com.geopresence.test.integration.GeopresenceClientRosterTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-integration-tests/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/geopresence-integration-tests/test-output/testng-results.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-mongodb/src/main/java/com/geopresence/mongodb/MongodbGeopresenceManager.java" afterPath="$PROJECT_DIR$/geopresence-mongodb/src/main/java/com/geopresence/mongodb/MongodbGeopresenceManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongoDBTest.java" afterPath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongoDBTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongodbGeopresenceBaseTest.java" afterPath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongodbGeopresenceBaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongodbGeopresenceManagerTest.java" afterPath="$PROJECT_DIR$/geopresence-mongodb/src/test/java/com/geopresence/mongodb/test/MongodbGeopresenceManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/pom.xml" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/GeopresencePlugin.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/GeopresencePlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationEventDispatcher.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationEventDispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationEventListener.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationPacketInterceptor.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/location/LocationPacketInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/changelog.html" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/changelog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/plugin.xml" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/readme.html" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/openfire/readme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/GeopresencePluginBaseTest.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/GeopresencePluginBaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/RosterUpdateTest.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/RosterUpdateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/SessionUpdateTest.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/SessionUpdateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/UserUpdateTest.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/UserUpdateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/integration/IntegrationTestIT.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/integration/IntegrationTestIT.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockGeopresencePlugin.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockGeopresencePlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockPresenceSubscribeHandler.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockPresenceSubscribeHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockRosterManager.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockRosterManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockSession.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockUser.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/mock/MockUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/org/jivesoftware/openfire/roster/Roster.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/org/jivesoftware/openfire/roster/Roster.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/org/jivesoftware/openfire/roster/RosterManager.java" afterPath="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/org/jivesoftware/openfire/roster/RosterManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-spark-plugin/assembly.xml" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/assembly.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/pom.xml" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/src/main/java/com/geopresence/spark/plugin/GeopresenceSparkPlugin.java" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/src/main/java/com/geopresence/spark/plugin/GeopresenceSparkPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geopresence-spark-plugin/pom.xml" afterPath="$PROJECT_DIR$/geopresence-spark-plugin/pom.xml" />
+    </list>
+    <ignored path="geopresence.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/geopresence-integration-tests/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-spark-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/geocell/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-parent/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-geocell/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-client-api/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-mongodb/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-openfire-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/geopresence-commons/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="geopresence" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="GeopresencePlugin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/GeopresencePlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="4.042879">
+              <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/GeopresencePlugin.java" />
+        <option value="$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/GeopresencePluginBaseTest.java" />
+        <option value="$PROJECT_DIR$/geopresence-mongodb/src/main/java/com/geopresence/mongodb/MongodbGeopresenceManager.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="PackagesPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence.openfire" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-openfire-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence.openfire" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="location" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-commons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-commons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-commons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exception" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-commons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-client-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geopresence-client-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.geopresence.client.test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="geopresence-integration-tests" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b62a8f7-5638-4c1a-a8de-6f1b6bdfa779" name="Default" comment="" />
+      <created>1452625909443</created>
+      <option name="number" value="Default" />
+      <updated>1452625909443</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/geopresence-openfire-plugin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/GeopresencePluginBaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geopresence-openfire-plugin/src/test/java/com/geopresence/openfire/test/RosterUpdateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geopresence-mongodb/src/main/java/com/geopresence/mongodb/MongodbGeopresenceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geopresence-client-api/src/test/java/com/geopresence/client/test/GeopresenceClientBaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geopresence-openfire-plugin/src/main/java/com/geopresence/openfire/GeopresencePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.042879">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

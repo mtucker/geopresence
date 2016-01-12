@@ -14,67 +14,65 @@ and limitations under the License.
 package com.beoui.geocell.model;
 
 /**
- *
  * @author Alexandre Gellibert <alexandre.gellibert@gmail.com>
- *
  */
 public class BoundingBox {
 
-    private Point northEast;
-    private Point northWest;
-	private Point southWest;
-    private Point southEast;
-    
+  private Point northEast;
+  private Point northWest;
+  private Point southWest;
+  private Point southEast;
 
-    public BoundingBox(double north, double east, double south, double west) {
-        double north_,south_;
-        if(south > north) {
-            south_ = north;
-            north_ = south;
-        } else {
-            south_ = south;
-            north_ = north;
-        }
 
-        // Don't swap east and west to allow disambiguation of
-        // antimeridian crossing.
-
-        northEast = new Point(north_, east);
-        southWest = new Point(south_, west);
-        northWest = new Point(north_, west);
-        southEast = new Point(south_, east);
+  public BoundingBox(double north, double east, double south, double west) {
+    double north_, south_;
+    if (south > north) {
+      south_ = north;
+      north_ = south;
+    } else {
+      south_ = south;
+      north_ = north;
     }
 
-    public double getNorth() {
-        return northEast.getLat();
-    }
+    // Don't swap east and west to allow disambiguation of
+    // antimeridian crossing.
 
-    public double getSouth() {
-        return southWest.getLat();
-    }
+    northEast = new Point(north_, east);
+    southWest = new Point(south_, west);
+    northWest = new Point(north_, west);
+    southEast = new Point(south_, east);
+  }
 
-    public double getWest() {
-        return southWest.getLon();
-    }
+  public double getNorth() {
+    return northEast.getLat();
+  }
 
-    public double getEast() {
-        return northEast.getLon();
-    }
+  public double getSouth() {
+    return southWest.getLat();
+  }
 
-    public Point getNorthEast() {
-        return northEast;
-    }
+  public double getWest() {
+    return southWest.getLon();
+  }
 
-    public Point getSouthWest() {
-        return southWest;
-    }
+  public double getEast() {
+    return northEast.getLon();
+  }
 
-    public Point getNorthWest() {
-		return northWest;
-	}
+  public Point getNorthEast() {
+    return northEast;
+  }
 
-	public Point getSouthEast() {
-		return southEast;
-	}
+  public Point getSouthWest() {
+    return southWest;
+  }
+
+  public Point getNorthWest() {
+    return northWest;
+  }
+
+  public Point getSouthEast() {
+    return southEast;
+  }
 
 }

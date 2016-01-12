@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
-<link href="../testng.css" rel="stylesheet" type="text/css" />
-<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+    <title>TestNG: Default test</title>
+    <link href="../testng.css" rel="stylesheet" type="text/css"/>
+    <link href="../my-testng.css" rel="stylesheet" type="text/css"/>
 
-<style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
-</style>
-<script type="text/javascript">
+    <style type="text/css">
+        .log { display: none;}
+        .stack-trace { display: none;}
+    </style>
+    <script type="text/javascript">
 <!--
 function flip(e) {
   current = e.style.display;
@@ -49,34 +49,53 @@ function toggleAllBoxes() {
 }
 
 // -->
-</script>
+
+    </script>
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
-</tr><tr>
-<td>Started on:</td><td>Fri Aug 26 10:27:23 EDT 2011</td>
-</tr>
-<tr><td>Total time:</td><td>13 seconds (13807 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<h2 align='center'>Default test</h2>
+<table border='1' align="center">
+    <tr>
+        <td>Tests passed/Failed/Skipped:</td>
+        <td>0/1/0</td>
+    </tr>
+    <tr>
+        <td>Started on:</td>
+        <td>Fri Aug 26 10:27:23 EDT 2011</td>
+    </tr>
+    <tr>
+        <td>Total time:</td>
+        <td>13 seconds (13807 ms)</td>
+    </tr>
+    <tr>
+        <td>Included groups:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Excluded groups:</td>
+        <td></td>
+    </tr>
+</table>
+<p/>
+<small><i>(Hover the method name to see the test class name)</i></small>
+<p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.geopresence.test.integration.GeopresenceChatTest.cleanup()'><b>cleanup</b><br>Test class: com.geopresence.test.integration.GeopresenceChatTest</td>
-<td><div><pre>No response from server.: 
+    <tr>
+        <td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td>
+    </tr>
+    <tr>
+        <td><b>Test method</b></td>
+        <td width="30%"><b>Exception</b></td>
+        <td width="10%"><b>Time (seconds)</b></td>
+        <td><b>Instance</b></td>
+    </tr>
+    <tr>
+        <td title='com.geopresence.test.integration.GeopresenceChatTest.cleanup()'><b>cleanup</b><br>Test class:
+            com.geopresence.test.integration.GeopresenceChatTest
+        </td>
+        <td>
+            <div><pre>No response from server.:
 	at org.jivesoftware.smack.AccountManager.deleteAccount(AccountManager.java:302)
 	at com.geopresence.test.integration.GeopresenceChatTest.cleanup(GeopresenceChatTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -104,8 +123,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1277304478", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1277304478'><pre>No response from server.: 
+</pre>
+            </div>
+            <a href='#'
+               onClick='toggleBox("stack-trace1277304478", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+                to show all stack frames</a>
+            <div class='stack-trace' id='stack-trace1277304478'><pre>No response from server.:
 	at org.jivesoftware.smack.AccountManager.deleteAccount(AccountManager.java:302)
 	at com.geopresence.test.integration.GeopresenceChatTest.cleanup(GeopresenceChatTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -133,20 +156,30 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-</pre></div></td>
-<td>0</td>
-<td>com.geopresence.test.integration.GeopresenceChatTest@e60e128</td></tr>
-</table><p>
+</pre>
+            </div>
+        </td>
+        <td>0</td>
+        <td>com.geopresence.test.integration.GeopresenceChatTest@e60e128</td>
+    </tr>
+</table>
+<p>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.geopresence.test.integration.GeopresenceChatTest.testChat()'><b>testChat</b><br>Test class: com.geopresence.test.integration.GeopresenceChatTest</td>
-<td><div><pre>java.lang.AssertionError
+    <tr>
+        <td colspan='4' align='center'><b>FAILED TESTS</b></td>
+    </tr>
+    <tr>
+        <td><b>Test method</b></td>
+        <td width="30%"><b>Exception</b></td>
+        <td width="10%"><b>Time (seconds)</b></td>
+        <td><b>Instance</b></td>
+    </tr>
+    <tr>
+        <td title='com.geopresence.test.integration.GeopresenceChatTest.testChat()'><b>testChat</b><br>Test class:
+            com.geopresence.test.integration.GeopresenceChatTest
+        </td>
+        <td>
+            <div><pre>java.lang.AssertionError
 	at com.geopresence.test.integration.GeopresenceChatTest.testChat(GeopresenceChatTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -173,8 +206,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1691703686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1691703686'><pre>java.lang.AssertionError
+</pre>
+            </div>
+            <a href='#'
+               onClick='toggleBox("stack-trace1691703686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+                to show all stack frames</a>
+            <div class='stack-trace' id='stack-trace1691703686'><pre>java.lang.AssertionError
 	at com.geopresence.test.integration.GeopresenceChatTest.testChat(GeopresenceChatTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -201,9 +238,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-</pre></div></td>
-<td>7</td>
-<td>com.geopresence.test.integration.GeopresenceChatTest@e60e128</td></tr>
-</table><p>
+</pre>
+            </div>
+        </td>
+        <td>7</td>
+        <td>com.geopresence.test.integration.GeopresenceChatTest@e60e128</td>
+    </tr>
+</table>
+<p>
 </body>
 </html>

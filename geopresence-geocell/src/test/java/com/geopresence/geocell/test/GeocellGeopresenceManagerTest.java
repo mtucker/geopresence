@@ -13,163 +13,164 @@ import java.util.*;
 
 public class GeocellGeopresenceManagerTest extends GeocellBaseTest {
 
-    protected GeocellGeopresenceManager geopresenceManager = GeocellGeopresenceManager.getInstance();
+  protected GeocellGeopresenceManager geopresenceManager = GeocellGeopresenceManager.getInstance();
 
-    @BeforeMethod
-    public void resetGrid() {
+  @BeforeMethod
+  public void resetGrid() {
 
-        geopresenceManager.removeEntity("test@test.com");
-        geopresenceManager.removeEntity("test1@test.com");
-        geopresenceManager.removeEntity("test2@test.com");
+    geopresenceManager.removeEntity("test@test.com");
+    geopresenceManager.removeEntity("test1@test.com");
+    geopresenceManager.removeEntity("test2@test.com");
 
-    }
+  }
 
-    @Test
-    public void testUpdateEntity(){
+  @Test
+  public void testUpdateEntity() {
 
-        geopresenceManager.updateEntity("test@test.com", home.getLat(), home.getLon(), 5000d);
+    geopresenceManager.updateEntity("test@test.com", home.getLat(), home.getLon(), 5000d);
 
-        List<String> expectedOccupiedCells = GeocellUtils.generateGeoCell(home);
-        GeocellEntity entity = gridManager.getGeocellEntity("test@test.com");
-        List<Geocell> occupiedCells = entity.getOccupiedCells();
+    List<String> expectedOccupiedCells = GeocellUtils.generateGeoCell(home);
+    GeocellEntity entity = gridManager.getGeocellEntity("test@test.com");
+    List<Geocell> occupiedCells = entity.getOccupiedCells();
 
-        assertCells(occupiedCells, expectedOccupiedCells);
+    assertCells(occupiedCells, expectedOccupiedCells);
 
-    }
+  }
 
-    @Test
-    public void testRemoveEntity(){
+  @Test
+  public void testRemoveEntity() {
 
-        geopresenceManager.removeEntity("test@test.com");
+    geopresenceManager.removeEntity("test@test.com");
 
-        GeocellEntity entity = gridManager.getGeocellEntity("test@test.com");
+    GeocellEntity entity = gridManager.getGeocellEntity("test@test.com");
 
-        assert entity == null;
+    assert entity == null;
 
-    }
+  }
 
-    @Test
-    public void testEntityExists(){
+  @Test
+  public void testEntityExists() {
 
-        geopresenceManager.updateEntity("test@test.com", home.getLat(), home.getLon(), 5000d);
+    geopresenceManager.updateEntity("test@test.com", home.getLat(), home.getLon(), 5000d);
 
-        assert geopresenceManager.entityExists("test@test.com");
+    assert geopresenceManager.entityExists("test@test.com");
 
-        geopresenceManager.removeEntity("test@test.com");
+    geopresenceManager.removeEntity("test@test.com");
 
-        assert !geopresenceManager.entityExists("test@test.com");
+    assert !geopresenceManager.entityExists("test@test.com");
 
-    }
+  }
 
-    @Test
-    public void testEntityIsProximateToEventEmission() {
+  @Test
+  public void testEntityIsProximateToEventEmission() {
 
-        MockGeopresenceEventListener eventListener = new MockGeopresenceEventListener();
-        GeopresenceEventDispatcher.addListener(eventListener);
+    MockGeopresenceEventListener eventListener = new MockGeopresenceEventListener();
+    GeopresenceEventDispatcher.addListener(eventListener);
 
-        ArrayList<Map<String, Object>> expectedEventParams = new ArrayList<Map<String, Object>>();
-        Map<String, Object> expectedEventParams1 = new HashMap<String, Object>();
-        expectedEventParams1.put("subjectEntity", "test1@test.com");
-        expectedEventParams1.put("proximateEntity", "test2@test.com");
-        Map<String, Object> expectedEventParams2 = new HashMap<String, Object>();
-        expectedEventParams2.put("subjectEntity", "test2@test.com");
-        expectedEventParams2.put("proximateEntity", "test1@test.com");
-        expectedEventParams.add(expectedEventParams1);
-        expectedEventParams.add(expectedEventParams2);
+    ArrayList<Map<String, Object>> expectedEventParams = new ArrayList<Map<String, Object>>();
+    Map<String, Object> expectedEventParams1 = new HashMap<String, Object>();
+    expectedEventParams1.put("subjectEntity", "test1@test.com");
+    expectedEventParams1.put("proximateEntity", "test2@test.com");
+    Map<String, Object> expectedEventParams2 = new HashMap<String, Object>();
+    expectedEventParams2.put("subjectEntity", "test2@test.com");
+    expectedEventParams2.put("proximateEntity", "test1@test.com");
+    expectedEventParams.add(expectedEventParams1);
+    expectedEventParams.add(expectedEventParams2);
 
-        geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
-        geopresenceManager.updateEntity("test2@test.com", home.getLat(), home.getLon(), 5000d);
+    geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
+    geopresenceManager.updateEntity("test2@test.com", home.getLat(), home.getLon(), 5000d);
 
-        ArrayList<Map<String, Object>> actualEventParams = eventListener.getEntityIsProximateTo();
+    ArrayList<Map<String, Object>> actualEventParams = eventListener.getEntityIsProximateTo();
 
-        assert actualEventParams.size() == 2 : "Expected 1, got " + actualEventParams.size();
+    assert actualEventParams.size() == 2 : "Expected 1, got " + actualEventParams.size();
 
-        for(Map<String, Object> expectedEventParam : actualEventParams){
+    for (Map<String, Object> expectedEventParam : actualEventParams) {
 
-            assert expectedEventParam.get("subjectEntity") == "test1@test.com"
-                    || expectedEventParam.get("subjectEntity") == "test2@test.com";
+      assert expectedEventParam.get("subjectEntity") == "test1@test.com"
+          || expectedEventParam.get("subjectEntity") == "test2@test.com";
 
-            if(expectedEventParam.get("subjectEntity").equals("test1@test.com")) {
+      if (expectedEventParam.get("subjectEntity").equals("test1@test.com")) {
 
-                assert expectedEventParam.get("proximateEntity").equals("test2@test.com");
+        assert expectedEventParam.get("proximateEntity").equals("test2@test.com");
 
-            } else if(expectedEventParam.get("subjectEntity").equals("test2@test.com")) {
+      } else if (expectedEventParam.get("subjectEntity").equals("test2@test.com")) {
 
-                assert expectedEventParam.get("proximateEntity").equals("test1@test.com");
+        assert expectedEventParam.get("proximateEntity").equals("test1@test.com");
 
-            }
-
-        }
+      }
 
     }
 
-    @Test
-    public void testEntityIsNoLongerProximateToEventEmission() {
+  }
 
-        MockGeopresenceEventListener eventListener = new MockGeopresenceEventListener();
-        GeopresenceEventDispatcher.addListener(eventListener);
+  @Test
+  public void testEntityIsNoLongerProximateToEventEmission() {
 
-        ArrayList<Map<String, Object>> expectedEventParams = new ArrayList<Map<String, Object>>();
-        Map<String, Object> expectedEventParams1 = new HashMap<String, Object>();
-        expectedEventParams1.put("subjectEntity", "test1@test.com");
-        expectedEventParams1.put("noLongerProximateEntity", "test2@test.com");
-        Map<String, Object> expectedEventParams2 = new HashMap<String, Object>();
-        expectedEventParams2.put("subjectEntity", "test2@test.com");
-        expectedEventParams2.put("noLongerProximateEntity", "test1@test.com");
-        expectedEventParams.add(expectedEventParams1);
-        expectedEventParams.add(expectedEventParams2);
+    MockGeopresenceEventListener eventListener = new MockGeopresenceEventListener();
+    GeopresenceEventDispatcher.addListener(eventListener);
 
-        geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
-        geopresenceManager.updateEntity("test2@test.com", home.getLat(), home.getLon(), 5000d);
+    ArrayList<Map<String, Object>> expectedEventParams = new ArrayList<Map<String, Object>>();
+    Map<String, Object> expectedEventParams1 = new HashMap<String, Object>();
+    expectedEventParams1.put("subjectEntity", "test1@test.com");
+    expectedEventParams1.put("noLongerProximateEntity", "test2@test.com");
+    Map<String, Object> expectedEventParams2 = new HashMap<String, Object>();
+    expectedEventParams2.put("subjectEntity", "test2@test.com");
+    expectedEventParams2.put("noLongerProximateEntity", "test1@test.com");
+    expectedEventParams.add(expectedEventParams1);
+    expectedEventParams.add(expectedEventParams2);
 
-        geopresenceManager.updateEntity("test2@test.com", hoboken.getLat(), hoboken.getLon(), 5000d);
+    geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
+    geopresenceManager.updateEntity("test2@test.com", home.getLat(), home.getLon(), 5000d);
 
-        ArrayList<Map<String, Object>> actualEventParams = eventListener.getEntityIsNoLongerProximateTo();
+    geopresenceManager.updateEntity("test2@test.com", hoboken.getLat(), hoboken.getLon(), 5000d);
 
-        assert actualEventParams.size() == 2 : "Expected 1, got " + actualEventParams.size();
+    ArrayList<Map<String, Object>> actualEventParams = eventListener.getEntityIsNoLongerProximateTo();
 
-        for(Map<String, Object> expectedEventParam : actualEventParams){
+    assert actualEventParams.size() == 2 : "Expected 1, got " + actualEventParams.size();
 
-            assert expectedEventParam.get("subjectEntity") == "test1@test.com"
-                    || expectedEventParam.get("subjectEntity") == "test2@test.com";
+    for (Map<String, Object> expectedEventParam : actualEventParams) {
 
-            if(expectedEventParam.get("subjectEntity").equals("test1@test.com")) {
+      assert expectedEventParam.get("subjectEntity") == "test1@test.com"
+          || expectedEventParam.get("subjectEntity") == "test2@test.com";
 
-                assert expectedEventParam.get("noLongerProximateEntity").equals("test2@test.com");
+      if (expectedEventParam.get("subjectEntity").equals("test1@test.com")) {
 
-            } else if(expectedEventParam.get("subjectEntity").equals("test2@test.com")) {
+        assert expectedEventParam.get("noLongerProximateEntity").equals("test2@test.com");
 
-                assert expectedEventParam.get("noLongerProximateEntity").equals("test1@test.com");
+      } else if (expectedEventParam.get("subjectEntity").equals("test2@test.com")) {
 
-            }
+        assert expectedEventParam.get("noLongerProximateEntity").equals("test1@test.com");
 
-        }
-
-    }
-
-    private class MockGeopresenceEventListener implements GeopresenceEventListener {
-
-        private ArrayList<Map<String, Object>> entityIsProximateTo = new ArrayList<Map<String, Object>>();
-        private ArrayList<Map<String, Object>> entityIsNoLongerProximateTo = new ArrayList<Map<String, Object>>();;
-
-        @Override
-        public void entityIsProximateTo(Map<String, Object> params) {
-            entityIsProximateTo.add(params);
-        }
-
-        @Override
-        public void entityIsNoLongerProximateTo(Map<String, Object> params) {
-            entityIsNoLongerProximateTo.add(params);
-        }
-
-        public ArrayList<Map<String, Object>> getEntityIsProximateTo() {
-            return entityIsProximateTo;
-        }
-
-        public ArrayList<Map<String, Object>> getEntityIsNoLongerProximateTo() {
-            return entityIsNoLongerProximateTo;
-        }
+      }
 
     }
+
+  }
+
+  private class MockGeopresenceEventListener implements GeopresenceEventListener {
+
+    private ArrayList<Map<String, Object>> entityIsProximateTo = new ArrayList<Map<String, Object>>();
+    private ArrayList<Map<String, Object>> entityIsNoLongerProximateTo = new ArrayList<Map<String, Object>>();
+    ;
+
+    @Override
+    public void entityIsProximateTo(Map<String, Object> params) {
+      entityIsProximateTo.add(params);
+    }
+
+    @Override
+    public void entityIsNoLongerProximateTo(Map<String, Object> params) {
+      entityIsNoLongerProximateTo.add(params);
+    }
+
+    public ArrayList<Map<String, Object>> getEntityIsProximateTo() {
+      return entityIsProximateTo;
+    }
+
+    public ArrayList<Map<String, Object>> getEntityIsNoLongerProximateTo() {
+      return entityIsNoLongerProximateTo;
+    }
+
+  }
 
 }

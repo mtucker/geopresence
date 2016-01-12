@@ -15,31 +15,31 @@ import org.testng.annotations.Test;
 import com.geopresence.openfire.test.mock.MockUser;
 
 public class UserUpdateTest extends GeopresencePluginBaseTest {
-	
-	private static final Logger log = LoggerFactory.getLogger(UserUpdateTest.class);
 
-	private GeopresenceManager geopresenceManager;
-	
-	@BeforeClass
-	public void setup() throws Exception {
-		
-		geopresenceManager = GeocellGeopresenceManager.getInstance();
-		
-	}
-	
-	@Test
-	public void testDeleteUser() throws Exception {
-		
-		User user = new MockUser("test1@test.com", "Test User 1", "test@test.com", new Date(), new Date());
+  private static final Logger log = LoggerFactory.getLogger(UserUpdateTest.class);
 
-        geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
-		
-		assert geopresenceManager.entityExists(user.getUsername());
-		
-		UserEventDispatcher.dispatchEvent(user, EventType.user_deleting, null);
+  private GeopresenceManager geopresenceManager;
 
-        assert !geopresenceManager.entityExists(user.getUsername());
-		
-	}
+  @BeforeClass
+  public void setup() throws Exception {
+
+    geopresenceManager = GeocellGeopresenceManager.getInstance();
+
+  }
+
+  @Test
+  public void testDeleteUser() throws Exception {
+
+    User user = new MockUser("test1@test.com", "Test User 1", "test@test.com", new Date(), new Date());
+
+    geopresenceManager.updateEntity("test1@test.com", home.getLat(), home.getLon(), 5000d);
+
+    assert geopresenceManager.entityExists(user.getUsername());
+
+    UserEventDispatcher.dispatchEvent(user, EventType.user_deleting, null);
+
+    assert !geopresenceManager.entityExists(user.getUsername());
+
+  }
 
 }

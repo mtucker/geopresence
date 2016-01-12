@@ -9,26 +9,22 @@ import java.util.List;
  * Geocells is used in query (entity must have a GEOCELLS column).
  *
  * @author Alexandre Gellibert
- *
  */
 public interface LocationCapable {
 
-    /**
-     *
-     * @return the location in latitude/longitude
-     */
-    Point getLocation();
+  /**
+   * @return the location in latitude/longitude
+   */
+  Point getLocation();
 
-    /**
-     *
-     * @return the key of the entity used as a String
-     */
-    String getKeyString();
+  /**
+   * @return the key of the entity used as a String
+   */
+  String getKeyString();
 
-    /**
-     *
-     * @return the key of the entity used as a String
-     */
-    List<String> getGeocells();
+  /**
+   * @return the key of the entity used as a String
+   */
+  List<String> getGeocells();
 
 }

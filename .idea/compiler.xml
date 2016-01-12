@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="geopresence-client-api" />
+        <module name="geopresence-commons" />
+        <module name="geopresence-geocell" />
+        <module name="geopresence-integration-tests" />
+        <module name="geopresence-mongodb" />
+        <module name="geopresence-openfire-plugin" />
+        <module name="geopresence-spark-plugin-classes" />
+      </profile>
+      <profile default="false" name="Annotation profile for geocell" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="geocell" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="geocell" target="1.5" />
+      <module name="geopresence-client-api" target="1.5" />
+      <module name="geopresence-commons" target="1.5" />
+      <module name="geopresence-geocell" target="1.5" />
+      <module name="geopresence-integration-tests" target="1.5" />
+      <module name="geopresence-mongodb" target="1.5" />
+      <module name="geopresence-openfire-plugin" target="1.5" />
+      <module name="geopresence-parent" target="1.5" />
+      <module name="geopresence-spark-plugin" target="1.5" />
+      <module name="geopresence-spark-plugin-classes" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

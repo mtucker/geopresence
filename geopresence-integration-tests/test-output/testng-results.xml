@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="1" total="1" passed="0">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="13807" started-at="2011-08-26T10:27:23Z" finished-at="2011-08-26T10:27:37Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="13807" started-at="2011-08-26T10:27:23Z" finished-at="2011-08-26T10:27:37Z">
-      <class name="com.geopresence.test.integration.GeopresenceChatTest">
-        <test-method status="PASS" signature="testServerAvailability()" name="testServerAvailability" is-config="true" duration-ms="62" started-at="2011-08-26T10:27:23Z" finished-at="2011-08-26T10:27:23Z">
-        </test-method>
-        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="1693" started-at="2011-08-26T10:27:23Z" finished-at="2011-08-26T10:27:24Z">
-        </test-method>
-        <test-method status="FAIL" signature="testChat()" name="testChat" duration-ms="7101" started-at="2011-08-26T10:27:24Z" finished-at="2011-08-26T10:27:32Z">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
+    <reporter-output>
+    </reporter-output>
+    <suite name="Default suite" duration-ms="13807" started-at="2011-08-26T10:27:23Z"
+           finished-at="2011-08-26T10:27:37Z">
+        <groups>
+        </groups>
+        <test name="Default test" duration-ms="13807" started-at="2011-08-26T10:27:23Z"
+              finished-at="2011-08-26T10:27:37Z">
+            <class name="com.geopresence.test.integration.GeopresenceChatTest">
+                <test-method status="PASS" signature="testServerAvailability()" name="testServerAvailability"
+                             is-config="true" duration-ms="62" started-at="2011-08-26T10:27:23Z"
+                             finished-at="2011-08-26T10:27:23Z">
+                </test-method>
+                <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="1693"
+                             started-at="2011-08-26T10:27:23Z" finished-at="2011-08-26T10:27:24Z">
+                </test-method>
+                <test-method status="FAIL" signature="testChat()" name="testChat" duration-ms="7101"
+                             started-at="2011-08-26T10:27:24Z" finished-at="2011-08-26T10:27:32Z">
+                    <exception class="java.lang.AssertionError">
+                        <full-stacktrace>
+                            <![CDATA[java.lang.AssertionError
 	at com.geopresence.test.integration.GeopresenceChatTest.testChat(GeopresenceChatTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -42,16 +48,17 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
 ]]>
-            </full-stacktrace>
-          </exception>
-        </test-method>
-        <test-method status="FAIL" signature="cleanup()" name="cleanup" is-config="true" duration-ms="0" started-at="2011-08-26T10:27:32Z" finished-at="2011-08-26T10:27:32Z">
-          <exception class="org.jivesoftware.smack.XMPPException">
-            <message>
-              <![CDATA[No response from server.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[No response from server.: 
+                        </full-stacktrace>
+                    </exception>
+                </test-method>
+                <test-method status="FAIL" signature="cleanup()" name="cleanup" is-config="true" duration-ms="0"
+                             started-at="2011-08-26T10:27:32Z" finished-at="2011-08-26T10:27:32Z">
+                    <exception class="org.jivesoftware.smack.XMPPException">
+                        <message>
+                            <![CDATA[No response from server.]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[No response from server.:
 	at org.jivesoftware.smack.AccountManager.deleteAccount(AccountManager.java:302)
 	at com.geopresence.test.integration.GeopresenceChatTest.cleanup(GeopresenceChatTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -80,10 +87,10 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
 ]]>
-            </full-stacktrace>
-          </exception>
-        </test-method>
-      </class>
-    </test>
-  </suite>
+                        </full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+        </test>
+    </suite>
 </testng-results>

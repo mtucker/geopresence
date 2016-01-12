@@ -5,21 +5,21 @@ import org.jivesoftware.smack.ChatManagerListener;
 
 public class ChatListener implements ChatManagerListener {
 
-	private ChatMessageListener messageListener = new ChatMessageListener();
-	
-	@Override
-	public void chatCreated(Chat chat, boolean createdLocally) {
-		
-		 if (!createdLocally){
-             
-			 chat.addMessageListener(messageListener);
-             
-		 }
-		
-	}
-	
-	public ChatMessageListener getMessageListener(){
-		return this.messageListener;
-	}
+  private ChatMessageListener messageListener = new ChatMessageListener();
+
+  @Override
+  public void chatCreated(Chat chat, boolean createdLocally) {
+
+    if (!createdLocally) {
+
+      chat.addMessageListener(messageListener);
+
+    }
+
+  }
+
+  public ChatMessageListener getMessageListener() {
+    return this.messageListener;
+  }
 
 }

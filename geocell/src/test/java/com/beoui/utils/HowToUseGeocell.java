@@ -32,109 +32,106 @@ import com.beoui.geocell.model.Point;
  * Unit test also used to explain how to use Geocell class.
  *
  * @author Alexandre Gellibert <alexandre.gellibert@gmail.com>
- *
  */
 public class HowToUseGeocell {
 
-    private final Logger log = Logger.getLogger("com.beoui.utils");
+  private final Logger log = Logger.getLogger("com.beoui.utils");
 
-    /**
-     * First step is to save your entities.
-     * In database, you don't save only latitude and longitude of your point but also geocells around this point.
-     */
-    @Test
-    public void testHowToSaveGeocellsInDatabase() {
-        // Incoming data: latitude and longitude (Bordeaux for instance)
-        double lat = 44.838611;
-        double lon = -0.578333;
+  /**
+   * First step is to save your entities.
+   * In database, you don't save only latitude and longitude of your point but also geocells around this point.
+   */
+  @Test
+  public void testHowToSaveGeocellsInDatabase() {
+    // Incoming data: latitude and longitude (Bordeaux for instance)
+    double lat = 44.838611;
+    double lon = -0.578333;
 
-        // Transform it to a point
-        Point p = new Point(lat, lon);
+    // Transform it to a point
+    Point p = new Point(lat, lon);
 
-        // Generates the list of GeoCells
-        List<String> cells = GeocellManager.generateGeoCell(p);
+    // Generates the list of GeoCells
+    List<String> cells = GeocellManager.generateGeoCell(p);
 
-        // Save your instance
-        ObjectToSave obj = new ObjectToSave();
-        obj.setLatitude(lat);
-        obj.setLongitude(lon);
-        obj.setGeocells(cells);
+    // Save your instance
+    ObjectToSave obj = new ObjectToSave();
+    obj.setLatitude(lat);
+    obj.setLongitude(lon);
+    obj.setGeocells(cells);
 
-        //objDao.save(obj);
+    //objDao.save(obj);
 
-        // Just checking that cells are not empty
-        assert cells.size() > 0;
+    // Just checking that cells are not empty
+    assert cells.size() > 0;
 
-        // Show in the log what cells are going to be saved
-        log.log(Level.INFO, "Geocells to be saved for Point("+lat+","+lon+") are: "+cells);
-    }
+    // Show in the log what cells are going to be saved
+    log.log(Level.INFO, "Geocells to be saved for Point(" + lat + "," + lon + ") are: " + cells);
+  }
 
-    /**
-     * Second step, now entities are in database, we can query on them.
-     * Here is the example of a bounding box query.
-     *
-     */
-    public void testHowToQueryOnABoundingBox() {
-        // Incoming data: latitude and longitude of south-west and north-east points (around Bordeaux for instance =) )
-        double latSW = 44.8;
-        double lonSW = -0.6;
+  /**
+   * Second step, now entities are in database, we can query on them.
+   * Here is the example of a bounding box query.
+   */
+  public void testHowToQueryOnABoundingBox() {
+    // Incoming data: latitude and longitude of south-west and north-east points (around Bordeaux for instance =) )
+    double latSW = 44.8;
+    double lonSW = -0.6;
 
-        double latNE = 44.9;
-        double lonNE = -0.7;
+    double latNE = 44.9;
+    double lonNE = -0.7;
 
-        // Transform this to a bounding box
-        BoundingBox bb = new BoundingBox(latNE, lonNE, latSW, lonSW);
+    // Transform this to a bounding box
+    BoundingBox bb = new BoundingBox(latNE, lonNE, latSW, lonSW);
 
-        // Calculate the geocells list to be used in the queries (optimize list of cells that complete the given bounding box)
-        List<String> cells = GeocellManager.bestBboxSearchCells(bb, null);
+    // Calculate the geocells list to be used in the queries (optimize list of cells that complete the given bounding box)
+    List<String> cells = GeocellManager.bestBboxSearchCells(bb, null);
 
-        // OR if you want to use a custom "cost function"
-        List<String> cells2 = GeocellManager.bestBboxSearchCells(bb, new CostFunction() {
+    // OR if you want to use a custom "cost function"
+    List<String> cells2 = GeocellManager.bestBboxSearchCells(bb, new CostFunction() {
 
-            public double defaultCostFunction(int numCells, int resolution) {
-                if(numCells > 100) {
-                    return Double.MAX_VALUE;
-                } else {
-                    return 0;
-                }
-            }
-        });
+      public double defaultCostFunction(int numCells, int resolution) {
+        if (numCells > 100) {
+          return Double.MAX_VALUE;
+        } else {
+          return 0;
+        }
+      }
+    });
 
-        // Use this in a query
-        // In Google App Engine, you'll have something like below. In hibernate (or whatever else), it might be a little bit different.
+    // Use this in a query
+    // In Google App Engine, you'll have something like below. In hibernate (or whatever else), it might be a little bit different.
 //		String queryString = "select from ObjectToSave where geocellsParameter.contains(geocells)";
 //		Query query = pm.newQuery(query);
 //	    query.declareParameters("String geocellsParameter");
 //	    query.declareParameters("String geocellsP");
 //	    List<ObjectToSave> objects = (List<ObjectToSave>) query.execute(cells);
 
-        // Just checking that cells are not empty
-        assert cells.size() > 0;
-        assert cells2.size() > 0;
+    // Just checking that cells are not empty
+    assert cells.size() > 0;
+    assert cells2.size() > 0;
 
-        // Show in the log what cells shoud be used in the query
-        log.log(Level.INFO, "Geocells to use in query for PointSW("+latSW+","+lonSW+") ; PointNE("+latNE+","+lonNE+") are: "+cells);
+    // Show in the log what cells shoud be used in the query
+    log.log(Level.INFO, "Geocells to use in query for PointSW(" + latSW + "," + lonSW + ") ; PointNE(" + latNE + "," + lonNE + ") are: " + cells);
+  }
+
+  /**
+   * To test proximity search, you have to give your base query and it will be enhanced with geocells restrictions.
+   */
+  // TODO configure persistent manager to run a real test
+  public void testHowToQueryWithProximitySearch() {
+    Point center = new Point(20.0, 12.4);
+    PersistenceManager pm = null;// here put your persistent manager
+    List<Object> params = new ArrayList<Object>();
+    params.add("John");
+    GeocellQuery baseQuery = new GeocellQuery("lastName == lastNameParam", "String lastNameParam", params);
+
+    List<ObjectToSave> objects = null;
+    try {
+      objects = GeocellManager.proximityFetch(center, 40, 0, ObjectToSave.class, baseQuery, pm);
+      assert objects.size() > 0;
+    } catch (Exception e) {
+      // We catch excption here because we have not configured the PersistentManager (and so the queries won't work)
     }
-
-    /**
-     * To test proximity search, you have to give your base query and it will be enhanced with geocells restrictions.
-     *
-     */
-    // TODO configure persistent manager to run a real test
-    public void testHowToQueryWithProximitySearch() {
-        Point center = new Point(20.0, 12.4);
-        PersistenceManager pm = null;// here put your persistent manager
-        List<Object> params = new ArrayList<Object>();
-        params.add("John");
-        GeocellQuery baseQuery = new GeocellQuery("lastName == lastNameParam", "String lastNameParam", params);
-
-        List<ObjectToSave> objects = null;
-        try {
-            objects = GeocellManager.proximityFetch(center, 40, 0, ObjectToSave.class, baseQuery, pm);
-            assert objects.size() > 0;
-        } catch (Exception e) {
-            // We catch excption here because we have not configured the PersistentManager (and so the queries won't work)
-        }
-    }
+  }
 
 }

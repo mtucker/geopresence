@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/geocell/geocell.iml" filepath="$PROJECT_DIR$/geocell/geocell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-client-api/geopresence-client-api.iml" filepath="$PROJECT_DIR$/geopresence-client-api/geopresence-client-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-commons/geopresence-commons.iml" filepath="$PROJECT_DIR$/geopresence-commons/geopresence-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-geocell/geopresence-geocell.iml" filepath="$PROJECT_DIR$/geopresence-geocell/geopresence-geocell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-integration-tests/geopresence-integration-tests.iml" filepath="$PROJECT_DIR$/geopresence-integration-tests/geopresence-integration-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-mongodb/geopresence-mongodb.iml" filepath="$PROJECT_DIR$/geopresence-mongodb/geopresence-mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-openfire-plugin/geopresence-openfire-plugin.iml" filepath="$PROJECT_DIR$/geopresence-openfire-plugin/geopresence-openfire-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-parent/geopresence-parent.iml" filepath="$PROJECT_DIR$/geopresence-parent/geopresence-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin.iml" filepath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/geopresence-spark-plugin-classes.iml" filepath="$PROJECT_DIR$/geopresence-spark-plugin/geopresence-spark-plugin-classes/geopresence-spark-plugin-classes.iml" />
+    </modules>
+  </component>
+</project>

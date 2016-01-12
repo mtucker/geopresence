@@ -17,18 +17,17 @@ import com.beoui.geocell.GeocellUtils;
 
 /**
  * Default cost function used if no cost function is specified in Geocell.bestBboxSearchCells method.
- * 
- * @author Alexandre Gellibert <alexandre.gellibert@gmail.com>
  *
+ * @author Alexandre Gellibert <alexandre.gellibert@gmail.com>
  */
 public class DefaultCostFunction implements CostFunction {
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.beoui.utils.CostFunction#defaultCostFunction(int, int)
-	 */
-	public double defaultCostFunction(int numCells, int resolution) {
-		return numCells > Math.pow(GeocellUtils.GEOCELL_GRID_SIZE, 2) ? Double.MAX_VALUE : 0;
-	}
-	
+  /*
+   * (non-Javadoc)
+   * @see com.beoui.utils.CostFunction#defaultCostFunction(int, int)
+   */
+  public double defaultCostFunction(int numCells, int resolution) {
+    return numCells > Math.pow(GeocellUtils.GEOCELL_GRID_SIZE, 2) ? Double.MAX_VALUE : 0;
+  }
+
 }

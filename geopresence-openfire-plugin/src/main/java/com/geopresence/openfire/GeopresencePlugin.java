@@ -7,8 +7,10 @@ import com.geopresence.GeopresenceManager;
 import com.geopresence.event.GeopresenceEventDispatcher;
 import com.geopresence.event.GeopresenceEventListener;
 import com.geopresence.geocell.GeocellGeopresenceManager;
+import com.geopresence.openfire.location.LocationEventDispatcher;
 import com.geopresence.openfire.location.LocationEventListener;
 import com.geopresence.xmpp.packet.GeoLoc;
+import com.sun.tools.classfile.Dependency;
 import org.jivesoftware.openfire.XMPPServer;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginManager;
@@ -64,9 +66,10 @@ public class GeopresencePlugin implements Plugin, LocationEventListener, Session
 
     Log.info("GeopresencePlugin Initialized...");
     interceptorManager.addInterceptor(locationPacketInterceptor);
+    LocationEventDispatcher.addListener(this);
     GeopresenceEventDispatcher.addListener(this);
     UserEventDispatcher.addListener(this);
-    SessionEventDispatcher.addListener(this);
+    SessionEventDispatcher.addListener(this);;
 
   }
 
@@ -74,6 +77,7 @@ public class GeopresencePlugin implements Plugin, LocationEventListener, Session
 
     Log.info("GeopresencePlugin Being Destroyed...");
     interceptorManager.removeInterceptor(locationPacketInterceptor);
+    LocationEventDispatcher.addListener(this);
     GeopresenceEventDispatcher.removeListener(this);
     UserEventDispatcher.removeListener(this);
     SessionEventDispatcher.removeListener(this);

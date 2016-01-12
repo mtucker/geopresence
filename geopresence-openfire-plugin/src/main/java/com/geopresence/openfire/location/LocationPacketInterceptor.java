@@ -12,7 +12,7 @@ import org.xmpp.packet.Packet;
 import com.geopresence.xmpp.packet.GeoLoc;
 
 /**
- * A sample plugin for Openfire.
+ * Extends XMPP server to accept lat and lon metadata in XMPP packets.
  */
 public class LocationPacketInterceptor implements PacketInterceptor {
 

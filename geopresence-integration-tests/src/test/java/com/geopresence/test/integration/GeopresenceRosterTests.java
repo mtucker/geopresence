@@ -14,6 +14,10 @@ import com.geopresence.test.integration.util.RosterEventListener;
 import com.geopresence.test.integration.util.RosterEventType;
 import com.geopresence.xmpp.packet.GeoLoc;
 
+/**
+ * Verifies that we can create users and update their geographical location and
+ * proximity radius.
+ */
 public class GeopresenceRosterTests extends GeopresenceIntegrationBaseTest {
 
   private static final Logger log = LoggerFactory.getLogger(GeopresenceRosterTests.class);
@@ -88,16 +92,19 @@ public class GeopresenceRosterTests extends GeopresenceIntegrationBaseTest {
   @Test(dependsOnMethods = "testCreateAccount")
   public void testGeoLocCreate() throws Exception {
 
+    // Create a new geographical location
     GeoLoc geoLoc = new GeoLoc();
     geoLoc.setLat(home.getLat());
     geoLoc.setLon(home.getLon());
     geoLoc.setMaxProximity(maxProximity);
     geoLoc.setType(Type.SET);
 
+    // Move both users to same GeoLoc
     user1XMPPConn.sendPacket(geoLoc);
 
     user2XMPPConn.sendPacket(geoLoc);
 
+    // Assert that the users were added to each other's roster
     assert user1RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER2_USERNAME);
     assert user2RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER1_USERNAME);
 
@@ -109,29 +116,40 @@ public class GeopresenceRosterTests extends GeopresenceIntegrationBaseTest {
   @Test(dependsOnMethods = "testCreateAccount")
   public void testGeoLocUpdate() throws Exception {
 
+    // Create a new geographical location
     GeoLoc geoLoc = new GeoLoc();
     geoLoc.setLat(hoboken.getLat());
     geoLoc.setLon(hoboken.getLon());
     geoLoc.setMaxProximity(maxProximity);
     geoLoc.setType(Type.SET);
 
+    // Update User 1's location and assert that
+    // User 2 is no longer in her roster (User 2 is no longer within proximity)
     user1XMPPConn.sendPacket(geoLoc);
     assert user1RosterListener.waitForRosterEvent(RosterEventType.DELETED, 10000L, USER2_USERNAME);
 
     assert !user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster contains " + USER2_USERNAME;
     assert !user2XMPPConn.getRoster().contains(USER2_USERNAME) : user2JID + "'s Roster contains " + USER1_USERNAME;
 
+    // Move User 2 to same location as User 1
     user2XMPPConn.sendPacket(geoLoc);
 
+    // Assert that User 1 and 2 are now again on each
+    // other's roster
     assert user1RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER2_USERNAME);
 
     assert user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster does not contain " + USER2_USERNAME;
     assert user2XMPPConn.getRoster().contains(USER1_USERNAME) : user2JID + "'s Roster does not contain " + USER1_USERNAME;
 
+    // Move User 1 again but still within
+    // User 2's proximity radius
     geoLoc.setLat(work.getLat());
     geoLoc.setLon(work.getLon());
 
     user1XMPPConn.sendPacket(geoLoc);
+
+    // Assert that users 1 and 2 are still on each
+    // other's rosters.
     assert !user1RosterListener.waitForRosterEvent(RosterEventType.DELETED, 10000L, USER2_USERNAME);
 
     assert user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster does not contain " + USER2_USERNAME;
@@ -142,32 +160,41 @@ public class GeopresenceRosterTests extends GeopresenceIntegrationBaseTest {
   @Test(dependsOnMethods = "testCreateAccount")
   public void testProximityUpdate() throws Exception {
 
+    // Create a new geographical location
     GeoLoc geoLoc = new GeoLoc();
     geoLoc.setLat(home.getLat());
     geoLoc.setLon(home.getLon());
     geoLoc.setMaxProximity(maxProximity);
     geoLoc.setType(Type.SET);
 
+    // Move both users to same GeoLoc
     user1XMPPConn.sendPacket(geoLoc);
     user2XMPPConn.sendPacket(geoLoc);
 
-    //assert user1RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER2_USERNAME);
-
+    // Assert that the users were added to each other's roster
     assert user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster does not contain " + USER2_USERNAME;
     assert user2XMPPConn.getRoster().contains(USER1_USERNAME) : user2JID + "'s Roster does not contain " + USER1_USERNAME;
 
+    // Move User 2 to new location
+    // within User 1's proximity radius
     geoLoc.setLat(work.getLat());
     geoLoc.setLon(work.getLon());
 
     user2XMPPConn.sendPacket(geoLoc);
 
+    // Assert that User 2 was not deleted from
+    // from User 1's roster
     assert !user1RosterListener.waitForRosterEvent(RosterEventType.DELETED, 10000L, USER2_USERNAME);
     assert user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster does not contain " + USER2_USERNAME;
 
+    // Update User 1's max proximity
+    // so that User 2 is now no longer in range
     geoLoc.setLat(home.getLat());
     geoLoc.setLon(home.getLon());
     geoLoc.setMaxProximity(3000);
 
+    // Assert that User 2 is no longer on
+    // User 1's roster
     user1XMPPConn.sendPacket(geoLoc);
     assert user1RosterListener.waitForRosterEvent(RosterEventType.DELETED, 10000L, USER2_USERNAME);
     assert !user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster contains " + USER2_USERNAME;

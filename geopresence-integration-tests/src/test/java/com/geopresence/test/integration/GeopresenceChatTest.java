@@ -23,6 +23,9 @@ import com.geopresence.test.integration.util.RosterEventListener;
 import com.geopresence.test.integration.util.RosterEventType;
 import com.geopresence.xmpp.packet.GeoLoc;
 
+/**
+ * Verifies that users that are in proximity to each other can exchange messages.
+ */
 public class GeopresenceChatTest extends GeopresenceIntegrationBaseTest {
 
   private static final Logger log = LoggerFactory.getLogger(GeopresenceChatTest.class);
@@ -92,22 +95,26 @@ public class GeopresenceChatTest extends GeopresenceIntegrationBaseTest {
   @Test
   public void testChat() throws Exception {
 
+    // Create a new geographical location
     GeoLoc geoLoc = new GeoLoc();
     geoLoc.setLat(home.getLat());
     geoLoc.setLon(home.getLon());
     geoLoc.setMaxProximity(maxProximity);
     geoLoc.setType(Type.SET);
 
+    // Move both users to same GeoLoc
     user1XMPPConn.sendPacket(geoLoc);
 
     user2XMPPConn.sendPacket(geoLoc);
 
+    // Assert that the users were added to each other's roster
     assert user1RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER2_USERNAME);
     assert user2RosterListener.waitForRosterEvent(RosterEventType.ADDED, 10000L, USER1_USERNAME);
 
     assert user1XMPPConn.getRoster().contains(USER2_USERNAME) : user1JID + "'s Roster does not contain " + USER2_USERNAME;
     assert user2XMPPConn.getRoster().contains(USER1_USERNAME) : user2JID + "'s Roster does not contain " + USER1_USERNAME;
 
+    // Send a message from User 1 to User 2
     ChatManager user1Chatmanager = user1XMPPConn.getChatManager();
     ChatMessageListener user1ChatMessageListener = new ChatMessageListener();
     Chat user1Chat = user1Chatmanager.createChat(user1JID, user1ChatMessageListener);
@@ -120,6 +127,7 @@ public class GeopresenceChatTest extends GeopresenceIntegrationBaseTest {
 
     Thread.sleep(3000);
 
+    // Verify that User 2 received the message
     List<Message> messages = user2ChatMessageListener.getChats(user1JID);
 
     assert messages != null;
